@@ -5,3 +5,8 @@
 @theme {
   --font-gothic: "Special Gothic", serif; 
 }
+
+body {
+ background: #0d1b2a;
+ color: #fff;
+}
