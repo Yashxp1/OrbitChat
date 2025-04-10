@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { Badge, Book, Brain } from 'lucide-react';
+import { div, h2 } from 'framer-motion/m';
+import { span } from 'framer-motion/client';
 
 const popularCat = [
   'Science',
@@ -11,6 +14,27 @@ const popularCat = [
   'Tech',
   'Math',
   'Facts',
+];
+
+const faq = [
+  {
+    logo: <Book className='text-rose-500 text-2xl' />,
+    question: 'Vast Knowledge Base',
+    answer:
+      'Access thousands of quizzes across multiple categories updated regularly.',
+  },
+  {
+    logo: <Badge className='text-blue-500 text-2xl '/>,
+    question: 'Compete & Win',
+    answer:
+      'Challenge friends, join leaderboards, and earn achievements as you play.',
+  },
+  {
+    logo: <Brain className='text-yellow-500 text-2xl' />,
+    question: 'Learn As You Play',
+    answer:
+      'Detailed explanations and resources help you improve with every quiz.',
+  },
 ];
 
 const Home = () => {
@@ -57,10 +81,21 @@ const Home = () => {
         </div>
       </div>
 
+      <div className="flex flex-col justify-center items-center border border-gray-700 my-3">
+        <h1 className="text-xl md:text-2xl lg:text-4xl font-extrabold py-12">
+          Why choose zapIQ?
+        </h1>
 
-<div>
-  
-</div>
+        <div className="w-[80%] mb-12">
+          {faq.map((items, idx) => (
+            <div key={idx} className='bg-gray-800 border flex flex-col justify-center gap-4 h-36 border-gray-700 p-4 w-full  rounded-lg my-4' >
+              <span>{items.logo}</span>
+              <h2 className='text-xl'>{items.question}</h2>
+              <p className='text-md text-gray-300'>{items.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
 
       <div>
         <Footer />
