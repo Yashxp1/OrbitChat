@@ -4,9 +4,11 @@
 
 @theme {
   --font-gothic: "Special Gothic", serif; 
+  --color-gruy: #0d1b2a;
 }
 
 body {
  background: #0d1b2a;
  color: #fff;
+ font-family: "Special Gothic";
 }
