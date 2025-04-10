@@ -42,7 +42,7 @@ const Home = () => {
     <div className="">
       <Navbar />
 
-      <div className="flex flex-col py-12 px-4">
+      <div className="flex flex-col py-12 mx-4 lg:mx-8">
         <div className="">
           <h1 className="text-purple-500 text-4xl md:text-5xl lg:text-6xl font-bold">
             Challenge Your Knowledge with{' '}
@@ -91,7 +91,7 @@ const Home = () => {
             <div key={idx} className='bg-gray-800 border flex flex-col justify-center gap-4 h-36 border-gray-700 p-4 w-full  rounded-lg my-4' >
               <span>{items.logo}</span>
               <h2 className='text-xl'>{items.question}</h2>
-              <p className='text-md text-gray-300'>{items.answer}</p>
+              <p className='text-md text-gray-300 '>{items.answer}</p>
             </div>
           ))}
         </div>
