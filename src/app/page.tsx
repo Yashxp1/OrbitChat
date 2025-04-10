@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const popularCat = [
   'Science',
@@ -37,7 +38,7 @@ const Home = () => {
             Learn More
           </button>
         </div>
-        <div className='flex justify-center items-center my-5'>
+        <div className="flex justify-center items-center my-5">
           <div className="items-center border rounded-lg  border-gray-800 p-3 my-10 md:w-[70%] lg:w-[70%]">
             <h1 className="text-2xl text-center md:text-3xl lg:text-3xl font-bold w-full py-3">
               Popular categories
@@ -54,6 +55,15 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+
+
+<div>
+  
+</div>
+
+      <div>
+        <Footer />
       </div>
     </div>
   );
