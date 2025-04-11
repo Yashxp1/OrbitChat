@@ -1,9 +1,8 @@
 import mongoose from 'mongoose';
-import { buffer } from 'stream/consumers';
 
-const MONGO_URI = process.env.MONGO_URI!;
+const MONGODB_URI = process.env.MONGODB_URI!;
 
-if (!MONGO_URI) {
+if (!MONGODB_URI) {
   throw new Error('MONGODB CONNECTION URI NOT FOUND');
 }
 
@@ -25,7 +24,7 @@ export async function connectDB() {
     };
 
     cached.promise = mongoose
-      .connect(MONGO_URI, opts)
+      .connect(MONGODB_URI, opts)
       .then(() => mongoose.connection);
   }
 
